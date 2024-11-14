@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   GlobalStyle,
   ContainerMain,
@@ -10,17 +11,33 @@ import {
   ContainerCopos,
   ContainerCopo,
 } from "./HomeStyles";
-
+import styled from "styled-components";
 import frappucino1 from "../../assets/frappucino1.png";
 import frappucino2 from "../../assets/frappucino2.png";
 import frappucino3 from "../../assets/frappucino3.png";
 
 export default function Home() {
-  const [frappucinoSelecionado, setFrappucinoSelecionado] = useState(frappucino1);
+  const [frappucinoSelecionado, setFrappucinoSelecionado] =
+    useState(frappucino1);
+  const [corDeFundo, setCorDeFundo] = useState("#037143");
 
-  const selecionarFrappucino1 = () => setFrappucinoSelecionado(frappucino1);
-  const selecionarFrappucino2 = () => setFrappucinoSelecionado(frappucino2);
-  const selecionarFrappucino3 = () => setFrappucinoSelecionado(frappucino3);
+  const selecionarFrappucino1 = () => {
+    setFrappucinoSelecionado(frappucino1);
+    setCorDeFundo("#037143");
+  };
+  const selecionarFrappucino2 = () => {
+    setFrappucinoSelecionado(frappucino2);
+    setCorDeFundo("#97090C");
+  };
+  const selecionarFrappucino3 = () => {
+    setFrappucinoSelecionado(frappucino3);
+    setCorDeFundo("#DECD13");
+  };
+
+  // Styled components com interpolação para a cor de fundo
+  const ContainerCopoStyled = styled(ContainerCopo)`
+    background-color: ${corDeFundo};
+  `;
 
   return (
     <>
@@ -40,9 +57,9 @@ export default function Home() {
           <Botao href="#">SAIBA MAIS</Botao>
         </ContainerTexts>
 
-        <ContainerCopo>
+        <ContainerCopoStyled>
           <img src={frappucinoSelecionado} alt="Frappucino Selecionado" />
-        </ContainerCopo>
+        </ContainerCopoStyled>
 
         <ContainerCopos>
           <button onClick={selecionarFrappucino1}>
