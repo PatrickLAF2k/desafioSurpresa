@@ -41,8 +41,12 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 0 5rem;
-  margin-top: 2rem;
-  height: 10vh;
+  align-items: center;
+  height: 15vh;
+
+  img{
+    width: 7%;
+  }
   nav {
     align-content: center;
     width: 30%;
