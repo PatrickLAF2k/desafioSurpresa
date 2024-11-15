@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -81,6 +81,19 @@ export const ContainerCopos = styled.div`
   }
 `;
 
+// Animação do copo
+const animacaoCopo = keyframes`
+0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg); 
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+`;
+
 export const ContainerCopo = styled.div`
   position: fixed;
   display: flex;
@@ -97,11 +110,6 @@ export const ContainerCopo = styled.div`
     width: 27%;
     right: 7%;
     top: 32%;
-    transition: 0.5s ease-in-out;
-  
-    &:hover {
-      transform: scale(1.3);
-      transition: 0.3s ease-in-out;
-    }
+    animation: ${animacaoCopo} 2s ease-in-out infinite;
   }
 `;
