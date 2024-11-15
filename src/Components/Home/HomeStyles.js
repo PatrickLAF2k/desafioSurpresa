@@ -7,13 +7,12 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;  
     list-style: none;
-    overflow: hidden;
     border: none;
   }
 `;
 
 export const ContainerMain = styled.main`
-  height: 90vh;
+  height: 80vh;
   position: absolute;
 `;
 
@@ -67,10 +66,17 @@ export const ContainerCopos = styled.div`
 
   button {
     background-color: transparent;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  
+    &:hover {
+      transform: scale(1.3) rotate(10deg);
+    }
 
     img {
       width: 60%;
       transform: rotate(-10deg);
+      
     }
   }
 `;
@@ -91,5 +97,11 @@ export const ContainerCopo = styled.div`
     width: 27%;
     right: 7%;
     top: 32%;
+    transition: 0.5s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.3);
+      transition: 0.3s ease-in-out;
+    }
   }
 `;
