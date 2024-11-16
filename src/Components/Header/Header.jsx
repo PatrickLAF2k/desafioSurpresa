@@ -55,6 +55,10 @@ const HeaderContainer = styled.header`
       display: flex;
       justify-content: space-around;
 
+      @media(min-width:901px) and (max-width: 1500px){ 
+        gap: 2rem  ;
+      }
+
       li {
         &:hover {
           transform: scale(1.1);
