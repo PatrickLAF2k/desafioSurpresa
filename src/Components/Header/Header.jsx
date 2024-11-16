@@ -44,7 +44,7 @@ const HeaderContainer = styled.header`
   align-items: center;
   height: 15vh;
 
-  img{
+  img {
     width: 7%;
   }
   nav {
@@ -56,6 +56,10 @@ const HeaderContainer = styled.header`
       justify-content: space-around;
 
       li {
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s ease-in-out;
+        }
         a {
           font-size: 1.5rem;
           font-family: "Poppins", sans-serif;

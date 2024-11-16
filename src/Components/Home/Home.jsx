@@ -127,7 +127,6 @@ const Botao = styled.a`
   cursor: pointer;
 
   &:hover {
-    background-color: #037143;
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
